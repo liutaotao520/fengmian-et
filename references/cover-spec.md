@@ -67,7 +67,7 @@ Avoid unsupported claims. Keep UI microcopy sparse and readable; the product lab
 
 ## Curated Palette Variants
 
-Use `scripts/select_palette.py` to choose one of these variants when randomization is requested. Record the returned palette and seed whenever producing a color variant.
+Use `scripts/select_palette.py` to choose one of these variants when randomization is requested. The selector currently contains fifteen curated variants. Record the returned palette and seed whenever producing a color variant. Use `--palette <name>` when the user wants one exact named variant.
 
 | Name | Background | Glass tint | Accent | Use |
 | --- | --- | --- | --- | --- |
@@ -76,6 +76,25 @@ Use `scripts/select_palette.py` to choose one of these variants when randomizati
 | mint-glass | `#EFFAF7` | `#D7F1EA` | `#0F9D8A` | Fresh low-saturation mint glass. |
 | mist-silver | `#F4F5F7` | `#E1E4EA` | `#667085` | Neutral cloud-silver enterprise glass. |
 | violet-gray | `#F5F2FA` | `#E7DFFF` | `#7657D9` | Soft violet-gray, slightly stronger reference accent. |
+| aqua-frost | `#F0FBFF` | `#D8F1F6` | `#148EA8` | Clear aqua frost with a calm technical accent. |
+| sage-ice | `#F2F9F5` | `#DCEEE4` | `#3F8A68` | Quiet sage-green glass with a natural software feel. |
+| rose-mist | `#FFF4F7` | `#F6E1E8` | `#BE5F7A` | Soft rose mist with a restrained editorial accent. |
+| periwinkle-air | `#F3F5FF` | `#E0E6FA` | `#536FC7` | Airy periwinkle with a precise blue-violet accent. |
+| lemon-ice | `#FFFCF1` | `#F3EFCF` | `#9A852D` | Pale lemon ice with a muted mineral-gold accent. |
+| teal-porcelain | `#F0FAFA` | `#D8EEEE` | `#2F8F91` | Clean teal porcelain with a balanced cyan accent. |
+| eucalyptus-cloud | `#F3F9F1` | `#DCEBD7` | `#5C8D63` | Soft eucalyptus cloud with a calm green accent. |
+| coral-veil | `#FFF6F3` | `#F5E2DA` | `#C46F5B` | Light coral veil with a restrained warm accent. |
+| cornflower-mist | `#F1F6FF` | `#DCE7F7` | `#4C78B8` | Clear cornflower mist with a practical blue accent. |
+| pistachio-haze | `#F7FBEF` | `#E8F0D0` | `#7C963C` | Pale pistachio haze with a muted olive accent. |
+
+Examples:
+
+```powershell
+python .\scripts\select_palette.py --palette glacier-blue
+python .\scripts\select_palette.py --mode random --seed news-cover-01
+```
+
+Named selection preserves the selected palette while still allowing the script to vary the atmospheric direction and glass strength. Random mode selects from all fifteen variants.
 
 Randomization may vary glow direction, haze strength, glass tint, and restrained accent use within the selected palette. It must not alter content, card count, grid choice, icon rail, or the title's reading order. Keep body text and title anchors near `#1D1D1F` unless contrast requires another accessible value. Use red only for an actual CAD identity badge, never as a general visual accent.
 

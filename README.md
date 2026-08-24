@@ -9,7 +9,7 @@
 - 根据内容密度自动选择右侧卡片排版，不固定使用 `2x2`。
 - 支持 Apple UI 风格：浅色半透明面板、细描边、克制圆角、轻阴影、清晰信息分组。
 - 支持高级毛玻璃风格：亚克力材质、微弱折射、柔和边缘和底部雾化。
-- 使用 `select_palette.py` 从受控浅色配色中随机选择背景，并保留随机种子。
+- 使用 `select_palette.py` 从 15 组受控浅色配色中随机选择背景，并保留随机种子；也可以按名称固定使用某一组。
 - 用户要求时，可在左下角排列 GPT、Codex、Gemini 或其他身份图标；默认不主动添加图标。
 - 新封面使用 Image2 生成，并在交付前检查尺寸、比例、标题、卡片和安全边距。
 
@@ -78,6 +78,7 @@ git pull --ff-only origin main
 ```powershell
 Get-Content (Join-Path $skillPath 'SKILL.md') -TotalCount 12
 python (Join-Path $skillPath 'scripts/select_palette.py') --mode random
+python (Join-Path $skillPath 'scripts/select_palette.py') --palette glacier-blue
 python (Join-Path $skillPath 'scripts/select_aspect.py') --mode random
 ```
 

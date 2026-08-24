@@ -41,9 +41,10 @@ Choose the layout from the actual content instead of forcing a fixed grid or car
 ## Controlled Background Randomization
 
 - Preserve random color variants as a core part of the skill. When the user requests a random or new background color, run `scripts/select_palette.py --mode random` and use the returned background, glass tint, accent, haze, glow direction, and glass strength in the prompt.
+- When the user names a curated palette, keep that exact palette instead of randomizing. The available names are documented in `references/cover-spec.md`; resolve one with `scripts/select_palette.py --palette <name>` when a structured palette record is needed. `--mode reference` remains the original `ice-lavender` palette, while `--mode random` now chooses across all 15 curated palettes.
 - A palette randomization changes the background atmosphere, glass tint, restrained accents, and haze only. It must not silently change the requested layout, product content, title copy, hierarchy, or icon order.
 - For a color-only revision, avoid choosing the immediately preceding palette. Re-run the selector with a new seed if it repeats, then note the selected palette name and seed in the working notes and final handoff.
-- Keep palettes pale, cool, and low-saturation. Do not introduce dark cyberpunk styling, neon, general red accents, or warm beige/brown/orange unless the user explicitly requests a different palette family.
+- Keep palettes pale and low-saturation. The curated `rose-mist`, `lemon-ice`, and `coral-veil` options are controlled soft-warm exceptions; do not generalize them into saturated red, orange, beige, or brown styling. Do not introduce dark cyberpunk styling, neon, or general red accents unless the user explicitly requests a different palette family.
 
 ## Generation And Delivery
 
