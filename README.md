@@ -211,3 +211,14 @@ python .\\scripts\\select_palette.py --mode random
 ### 生成封面时 Image2 不可用
 
 这不是布局规则问题，而是当前 Codex 环境没有可用的 `image2-generate` 能力、账户权限或 Image2 配置。不要把 API key 写入仓库，也不要用其他人的凭据替换它；先修复当前 Codex 的 Image2 能力，再重新生成。
+
+
+## 生成示例
+
+### Apple UI 四卡布局
+
+![Codex 实战化教程 Apple UI 四卡示例](examples/codex-tutorial-apple-ui.png)
+
+### 冰川蓝毛玻璃布局
+
+![Codex 实战化教程冰川蓝毛玻璃示例](examples/codex-tutorial-frosted-glass.png)
