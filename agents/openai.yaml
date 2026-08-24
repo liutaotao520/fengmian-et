@@ -1,0 +1,5 @@
+interface:
+  display_name: "封面et skill"
+  short_description: "生成 Eitan 多比例、可选图标、右侧自适应 Apple UI 或毛玻璃卡片的随机配色 2K 封面"
+  brand_color: "#1677FF"
+  default_prompt: "使用 $fengmian-et 创建一张 Eitan 软件封面：比例支持 16:9、9:16、4:3、3:4、1:1，根据平台或内容自动选择或随机调整；按方向自适应标题和卡片布局，可选 Apple UI 或毛玻璃风格，按需加入图标，并使用受控随机背景配色。"

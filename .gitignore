@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+tmp/
+output/
+generated/
+*_Image2*.png
+*_2K.png
+.image2_api_key
+image2-settings.json
+config.toml
