@@ -223,3 +223,13 @@ python .\\scripts\\select_palette.py --mode random
 ### 冰川蓝毛玻璃布局
 
 ![Codex 实战化教程冰川蓝毛玻璃示例](examples/codex-tutorial-frosted-glass.png)
+
+### Eitan 室内一体化插件
+
+#### 雾银编辑网格
+
+![Eitan 室内一体化插件雾银编辑网格示例](examples/eitan-indoor-integrated-mist-silver.png)
+
+#### 薄荷玻璃编辑网格
+
+![Eitan 室内一体化插件薄荷玻璃编辑网格示例](examples/eitan-indoor-integrated-mint-glass.png)
