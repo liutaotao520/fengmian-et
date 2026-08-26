@@ -13,6 +13,48 @@
 - 用户要求时，可在左下角排列 GPT、Codex、Gemini 或其他身份图标；默认不主动添加图标。
 - 新封面使用 Image2 生成，并在交付前检查尺寸、比例、标题、卡片和安全边距。
 
+## 背景配色主题
+
+Skill 内置 15 组低饱和背景主题。每组主题由背景底色、毛玻璃卡片色、主强调色和底部雾化色组成；随机选择只改变背景氛围，不改变标题、内容、卡片数量或排版结构。
+
+| 名称 | 背景底色 | 毛玻璃色 | 强调色 | 视觉描述 |
+| --- | --- | --- | --- | --- |
+| `ice-lavender` | `#F0F0FF` | `#DCDFF0` | `#635BDB` | 冰雾淡紫，最接近原始参考风格 |
+| `glacier-blue` | `#EEF7FF` | `#D8E9FF` | `#1677FF` | 冰川蓝，清透且有技术感 |
+| `mint-glass` | `#EFFAF7` | `#D7F1EA` | `#0F9D8A` | 薄荷玻璃，清爽轻盈 |
+| `mist-silver` | `#F4F5F7` | `#E1E4EA` | `#667085` | 雾银灰，克制的企业级质感 |
+| `violet-gray` | `#F5F2FA` | `#E7DFFF` | `#7657D9` | 柔和灰紫，比参考色更突出 |
+| `aqua-frost` | `#F0FBFF` | `#D8F1F6` | `#148EA8` | 水蓝冰霜，冷静的技术蓝绿 |
+| `sage-ice` | `#F2F9F5` | `#DCEEE4` | `#3F8A68` | 鼠尾草冰绿，自然安静 |
+| `rose-mist` | `#FFF4F7` | `#F6E1E8` | `#BE5F7A` | 雾玫瑰，柔和的编辑感 |
+| `periwinkle-air` | `#F3F5FF` | `#E0E6FA` | `#536FC7` | 空气蓝紫，轻盈而精确 |
+| `lemon-ice` | `#FFFCF1` | `#F3EFCF` | `#9A852D` | 冰柠檬金，明亮但不过饱和 |
+| `teal-porcelain` | `#F0FAFA` | `#D8EEEE` | `#2F8F91` | 青瓷蓝绿，干净平衡 |
+| `eucalyptus-cloud` | `#F3F9F1` | `#DCEBD7` | `#5C8D63` | 桉叶云绿，柔和沉静 |
+| `coral-veil` | `#FFF6F3` | `#F5E2DA` | `#C46F5B` | 珊瑚薄纱，受控的暖色变化 |
+| `cornflower-mist` | `#F1F6FF` | `#DCE7F7` | `#4C78B8` | 矢车菊雾蓝，实用清晰 |
+| `pistachio-haze` | `#F7FBEF` | `#E8F0D0` | `#7C963C` | 开心果雾绿，柔和的橄榄强调 |
+
+底部雾化色、渐变方向、光晕位置和毛玻璃强度会随每次随机选择继续生成。完整色值和规则见 [`references/cover-spec.md`](references/cover-spec.md)。
+
+随机选择一组：
+
+```powershell
+python .\scripts\select_palette.py --mode random
+```
+
+固定指定一组：
+
+```powershell
+python .\scripts\select_palette.py --palette glacier-blue
+```
+
+固定配色并让气氛参数可复现：
+
+```powershell
+python .\scripts\select_palette.py --palette aqua-frost --seed cover-demo-01
+```
+
 ## 目录结构
 
 ```text
