@@ -275,3 +275,9 @@ python .\\scripts\\select_palette.py --mode random
 #### 薄荷玻璃编辑网格
 
 ![Eitan 室内一体化插件薄荷玻璃编辑网格示例](examples/eitan-indoor-integrated-mint-glass.png)
+
+## 15 个新增主题示例
+
+下面的行业热点封面合集展示了 15 个新增背景主题的实际效果。每个主题保持统一的信息层级和封面结构，仅变化背景配色、渐变方向、光晕位置与毛玻璃氛围。
+
+![15 个新增背景主题行业热点封面合集](examples/industry-hotspot-15-new-themes.jpg)
