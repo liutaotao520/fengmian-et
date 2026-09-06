@@ -1,6 +1,6 @@
 ---
 name: fengmian-et
-description: Create or revise Eitan software covers in 16:9, 9:16, 4:3, 3:4, or 1:1 with adaptive Apple-style or frosted cards, optional identity icons, and controlled random palettes.
+description: Create or revise Eitan software covers in 16:9, 9:16, 4:3, 3:4, or 1:1 with adaptive Apple UI, macOS system-frosted, or frosted cards, optional identity icons, and controlled random palettes.
 ---
 
 # 封面 ET Skill
@@ -17,7 +17,7 @@ Before producing a cover, read [references/cover-spec.md](references/cover-spec.
 - Set the title as one or two flat, heavy, modern Chinese sans-serif lines. It may use the established restrained editorial color contrast: brand/key word in blue, a near-black anchor word, a cool secondary color, and a muted warm accent where appropriate. Adapt the mapping to the user's actual wording; do not force every color into every title.
 - Keep title lettering flat. Do not add 3D extrusion, bevels, chrome, inflated forms, heavy outlines, or dramatic shadows unless the user specifically asks.
 - Add a subtitle only when the brief supplies one or it clearly improves the hierarchy. Never invent marketing copy that changes the user's product claim.
-- Use premium frosted-glass material throughout: pale translucent acrylic frames, thin light rims, subtle blurred bleed-through, delicate contact shadows, and clean bright UI faces. Cards must feel light rather than opaque or bulky.
+- Use premium frosted-glass material throughout: pale translucent acrylic frames, thin light rims, subtle blurred bleed-through, delicate contact shadows, and clean bright UI faces. Cards must feel light rather than opaque or bulky. When the user asks for a macOS system frosted effect, use the `macos-frosted` mode described below.
 - Treat the identity rail as optional. Add product/software icons only when the user supplies them or explicitly requests them. When present, place icon-plus-label pairs in an orderly lower-left rail, preserving supplied/order-of-workflow order; if the rail becomes too wide, wrap cleanly to a restrained second row. Do not invent icons merely to fill empty space.
 - Keep product icons, titles, and visual evidence authentic to the requested software. Do not invent logos, integrations, or capabilities.
 
@@ -35,8 +35,9 @@ Choose the layout from the actual content instead of forcing a fixed grid or car
 ## Card Style Modes
 
 - Use `apple-ui` when the user asks for Apple UI, Apple-like polish, or a premium system-panel look: one light translucent panel per card, restrained 8-12px corner radius, a fine hairline border, shallow diffuse shadow, precise spacing, compact status pills, and quiet separators. Keep the panel bright and light; do not add an Apple logo or unrelated Apple branding.
+- Use `macos-frosted` when the user asks for a macOS system glass, macOS frosted glass, vibrancy, or a translucent desktop-panel effect: layered translucent material with visible background blur, a restrained system-tint wash, soft inner highlight, fine white rim, 12-18px system-like corner radius, gentle depth shadow, and clear high-contrast controls. Keep the blur behind the panel while the title, card headings, and evidence remain sharp. Use restrained vibrancy rather than a glossy plastic or neon look; do not add an Apple logo or unrelated Apple branding.
 - Use `frosted-acrylic` when the user emphasizes glass, refraction, or a supplied frosted reference: palette-tinted acrylic, subtle blur/refraction, pale rims, and a quiet lower haze.
-- Combine the two when useful: Apple-like information hierarchy inside a frosted-acrylic surface. Do not nest decorative cards inside cards; internal UI evidence may use flat sections, tabs, diff highlights, lists, and status rows.
+- Combine the modes when useful: macOS-style system frosted material with Apple-like information hierarchy, or Apple-like hierarchy inside a frosted-acrylic surface. Do not nest decorative cards inside cards; internal UI evidence may use flat sections, tabs, diff highlights, lists, and status rows.
 
 ## Controlled Background Randomization
 
@@ -52,7 +53,7 @@ Choose the layout from the actual content instead of forcing a fixed grid or car
 2. Inspect the current cover and identify what the user wants preserved. For a content change, replace prior copy and cards with the new brief; for a palette-only change, preserve the composition and content.
 3. Select or randomize the ratio first, then select the orientation-aware composition, adaptive card layout, card style, and palette using the rules above.
 4. For a newly generated raster, use the `image2-generate` skill and its bundled Image2 script. Follow that skill's credential and output rules; never expose or substitute its credentials.
-5. In the generation prompt, explicitly state: exact user-supplied text, flat title treatment, the selected orientation-aware title/content composition, the chosen layout and card style mode, the chosen palette, optional icon rail placement only when icons are requested, and the real evidence required inside each card. State that there must be no garbled text, copied reference wording, people, watermarks, platform controls, or unrelated brands.
+5. In the generation prompt, explicitly state: exact user-supplied text, flat title treatment, the selected orientation-aware title/content composition, the chosen layout and card style mode, the chosen palette, optional icon rail placement only when icons are requested, and the real evidence required inside each card. For `macos-frosted`, explicitly request sharp foreground UI over blurred background bleed-through, translucent layered material, a fine light rim, subtle inner highlight, and restrained vibrancy. State that there must be no garbled text, copied reference wording, people, watermarks, platform controls, or unrelated brands.
 6. Preserve the original Image2 result. Request the selected dimensions with Image2 when supported; if Image2 returns a smaller proportional result, export a separately named PNG at the selected dimensions using high-quality resampling. Never overwrite the source artwork for a color-only variant.
 7. Verify the final file exists, matches the selected dimensions and ratio, and render it for visual inspection. Confirm title readability, orientation-appropriate title/content zones, optional icon rail spacing, chosen card layout, non-overlap, text safe margins, card material/style, and the requested palette change before delivery.
 

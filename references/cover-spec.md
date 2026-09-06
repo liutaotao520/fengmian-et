@@ -55,14 +55,16 @@ Avoid unsupported claims. Keep UI microcopy sparse and readable; the product lab
 ## Card Style Modes
 
 - `apple-ui`: light translucent system panels, restrained 8-12px radius, fine hairline border, shallow diffuse shadow, precise spacing, compact status pills, and quiet separators. Keep each card as one surface; internal evidence can use flat sections and lists. Do not add an Apple logo or unrelated Apple branding.
+- `macos-frosted`: macOS-like translucent system material with visible background blur and layered vibrancy, a restrained palette tint, soft inner highlight, fine light rim, 12-18px system-like corner radius, gentle depth shadow, and sharp foreground controls over the blurred bleed-through. Keep the panel airy and tactile without making it glossy, plastic, neon, or dark. Do not add an Apple logo or unrelated Apple branding.
 - `frosted-acrylic`: palette-tinted acrylic, gentle blur/refraction, pale rims, delicate contact shadows, and a quiet lower haze.
-- Hybrid: use Apple-like hierarchy inside frosted acrylic when both are requested. Keep the result light, precise, and free of bulky opaque panels.
+- Hybrid: use Apple-like hierarchy inside frosted acrylic when both are requested. macOS-frosted may be combined with Apple-like hierarchy when the user wants both system vibrancy and structured panels. Keep the result light, precise, and free of bulky opaque panels.
 
 ## Glass Material
 
 - Frames: milky translucent white or palette-tinted acrylic with thin pale highlight rims.
 - Surfaces: gentle background blur/refraction and a subtle depth shadow, while the internal UI remains bright and clear.
 - Weight: light and precise. Avoid chunky opaque white panels, heavy drop shadows, dark glazing, or decorative gradients inside every card.
+- macOS system frosted treatment: use two or three restrained translucency layers, with the strongest blur behind the panel and a subtle brighter inner edge toward the light source. Keep foreground text and evidence crisp, and let the selected palette tint the vibrancy without overpowering the content.
 - Background: continuous pale gradient with diffuse glow and restrained lower haze. Never add bokeh/orb decorations.
 
 ## Curated Palette Variants
